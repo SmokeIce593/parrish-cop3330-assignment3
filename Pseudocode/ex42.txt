@@ -1,0 +1,15 @@
+Base:
+Read from list (input into ArrayList)
+
+Sort:
+Siphon through each line from list , is the delimiter
+Using the delimiter adding each parameter to list
+
+Table:
+Get max string length for each section.
+Add a set number of spaces after each (3)
+
+Spaces between last and first is max length last + space last – 4
+Spaces between first and salary is max length first + space first -5
+Then Salary.
+Then get number of dashes max first +3 max last +3 max salary +3

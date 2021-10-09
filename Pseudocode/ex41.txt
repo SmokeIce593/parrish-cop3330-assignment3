@@ -1,0 +1,10 @@
+Base:
+Read file from list
+Input contents of file into List
+
+Sort:
+Take read in List and sort (Collections.sort is a possible choice)
+
+Export:
+Iterate through List
+Output each line of list into correct output txt
