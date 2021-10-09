@@ -1,0 +1,12 @@
+Base:
+Read file from list
+Input contents of file into List
+
+Sort:
+Iterate through each saved line and use the replace all function
+
+
+Export:
+Ask for name of output file and wait for input. Make output\ (Name of file).txt
+Iterate through List
+Output each line of list into correct output txt
