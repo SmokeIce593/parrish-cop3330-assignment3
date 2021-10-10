@@ -1,0 +1,12 @@
+Base:
+Read file from list
+Input contents of file into List
+
+Sort:
+Spread out imported list. Each word is a new array element. Use space as a delimiter to determine the end of a word.
+Take this list and iterate through taking each new work and adding it to a hashmap and a total word list. If the word already exists add +1 to the value
+Then sort the hashmap by value.
+
+Export:
+Iterate through the sorted hashmap.
+Each value needs to be converted to a *.
