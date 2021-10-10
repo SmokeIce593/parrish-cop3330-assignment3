@@ -1,0 +1,9 @@
+Base:
+Ask user input for site name, author, JavaScript Folder, and CSS Folder.
+Output the created text at the end of the program. Go through and create all folders and files from WebsiteGenerator
+
+WebsiteGenerator:
+Create main Directory
+Create HTML File and add the Site Name and Author Name to it
+Create JS Directory (If input == y || == Y)
+Create CSS Directory (If input == y || == Y)
