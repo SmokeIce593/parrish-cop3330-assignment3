@@ -4,14 +4,12 @@
  */
 package ex41;
 
-import java.util.Collections;
 import java.util.List;
-
 
 
 public class NameSorterSort {
     public static List<String> sortList(List<String> names) {
-        Collections.sort(names, String.CASE_INSENSITIVE_ORDER);
+        names.sort(String.CASE_INSENSITIVE_ORDER);
         return names;
     }
 }

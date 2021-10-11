@@ -16,8 +16,8 @@ public class NameSorterExport {
 
         outputWriter.write("Total of " + Names.size() + " names\n");
         outputWriter.write("-----------------\n");
-        for(int i=0; i<Names.size(); i++) {
-            outputWriter.write(Names.get(i) + "\n");
+        for (String name : Names) {
+            outputWriter.write(name + "\n");
         }
         outputWriter.close();
     }

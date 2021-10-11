@@ -13,19 +13,17 @@ import java.nio.file.Files;
 public class WordFinderBase {
 
     public static void main(String[] args) throws Exception {
-        WordFinderExport export = new WordFinderExport();
         WordFinderSort sort = new WordFinderSort();
         // Turns input file into List
         List<String> names = convertFile();
         names = sort.ChangeWord(names);
-        export.exportList(names);
+        WordFinderExport.exportList(names);
     }
 
 
 
     private static List<String> convertFile() throws IOException {
-        List<String> names = Files.readAllLines(Path.of("Input/exercise45_input.txt"));
-        return names;
+        return Files.readAllLines(Path.of("Input/exercise45_input.txt"));
     }
 
 

@@ -12,7 +12,7 @@ import java.lang.*;
 
 public class FileParseSort {
     public List<String> Combiner(List<String> names) {
-        List<String> spreadList = new ArrayList<String>();
+        List<String> spreadList = new ArrayList<>();
 
         // Goes through all lines
         for (int i=0; i<names.size(); i++){
@@ -28,24 +28,25 @@ public class FileParseSort {
     }
 
     public List<String> CharCombiner(List<String> names, String Current, String CurrentBuild, int i) {
-            List<String> spreadList = new ArrayList<String>();
+            List<String> spreadList = new ArrayList<>();
             // Goes through every character and checks for ,. Since the last name is before the first ,
             // And first name is before salary
-            for(int j=0; j<names.get(i).length(); j++){
+        StringBuilder CurrentBuildBuilder = new StringBuilder(CurrentBuild);
+        for(int j = 0; j<names.get(i).length(); j++){
                 // If size of spreadlist is 2 (When it's about to be the numbers) then break
                 if (spreadList.size() == 2){
-                    spreadList.add(names.get(i).substring(j, names.get(i).length()));
+                    spreadList.add(names.get(i).substring(j));
                     break;
                 }
 
                 // If current character == ' we need to add to list
                 if(Current.charAt(j) == ','){
-                    spreadList.add(CurrentBuild);
-                    CurrentBuild = "";
+                    spreadList.add(CurrentBuildBuilder.toString());
+                    CurrentBuildBuilder = new StringBuilder();
                 }
                 else{
                     // This adds letter by letter to the last name until , is reached.
-                    CurrentBuild = CurrentBuild + Current.charAt(j);
+                    CurrentBuildBuilder.append(Current.charAt(j));
                 }
             }
         return spreadList;

@@ -3,22 +3,21 @@
 
 
 
-class Sort{
+class NameSorterSort{
     + {static} List<String> sortList()
 }
 
-class Base{
+class NameSorterBase{
     +List<String> Names
    + {static} void main()
     - {static} List<String> convertFile()
 }
 
-class Export{
+class NameSorterExport{
     + {static} void exportList()
-    FileWriter outputWriter = new FileWriter()
 }
 
-Base <|-- Sort
-Base <|-- Export
+NameSorterBase <|-- NameSorterSort
+NameSorterBase <|-- NameSorterExport
 
 @enduml

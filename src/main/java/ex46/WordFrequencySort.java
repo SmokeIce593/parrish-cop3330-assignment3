@@ -10,7 +10,7 @@ import java.lang.*;
 
 public class WordFrequencySort {
     public List<String> Combiner(List<String> textList) {
-        List<String> spreadList = new ArrayList<String>();
+        List<String> spreadList = new ArrayList<>();
 
         // Goes through all lines
         for (int i=0; i<textList.size(); i++){
@@ -26,27 +26,27 @@ public class WordFrequencySort {
     }
 
     public List<String> CharCombiner(List<String> names, String Current, String CurrentBuild, int i) {
-        List<String> spreadList = new ArrayList<String>();
-        // Goes through every character and checks for ,. Since the last name is before the first ,
+        List<String> spreadList = new ArrayList<>();
+        // Goes through every character and checks for spaces. Since the last name is before the first ,
         // And first name is before salary
         int lastspace = -1;
-        for(int j=0; j<names.get(i).length(); j++){
-            // If size of spreadlist is 2 (When it's about to be the numbers) then break
+        StringBuilder CurrentBuildBuilder = new StringBuilder(CurrentBuild);
+        for(int j = 0; j<names.get(i).length(); j++){
+            // If last character in word then break
             if (j == names.get(i).length()-1){
-                spreadList.add(names.get(i).substring(lastspace + 1, names.get(i).length()));
-                CurrentBuild = "";
+                spreadList.add(names.get(i).substring(lastspace + 1));
                 break;
             }
 
             // If current character == ' we need to add to list
             if(Current.charAt(j) == ' '){
-                spreadList.add(CurrentBuild);
-                CurrentBuild = "";
+                spreadList.add(CurrentBuildBuilder.toString());
+                CurrentBuildBuilder = new StringBuilder();
                 lastspace = j;
             }
             else{
                 // This adds letter by letter to the last name until , is reached.
-                CurrentBuild = CurrentBuild + Current.charAt(j);
+                CurrentBuildBuilder.append(Current.charAt(j));
             }
         }
         return spreadList;
@@ -55,17 +55,16 @@ public class WordFrequencySort {
     // Gets the values of all words into a map
     public TreeMap<String, Integer> WordFrequency(List<String> textList) {
         Map<String, Integer> Frequency = new HashMap();
-        for(int i=0; i<textList.size(); i++){
-            if(Frequency.containsKey(textList.get(i))){
-                Frequency.replace(textList.get(i), Frequency.get(textList.get(i)) + 1);
-            }
-            else{
-                Frequency.put(textList.get(i), 1);
+        for (String s : textList) {
+            if (Frequency.containsKey(s)) {
+                Frequency.replace(s, Frequency.get(s) + 1);
+            } else {
+                Frequency.put(s, 1);
             }
 
         }
         WordFrequencyCompare sort = new WordFrequencyCompare(Frequency);
-        TreeMap<String, Integer> sorted = new TreeMap<String, Integer>(sort);
+        TreeMap<String, Integer> sorted = new TreeMap<>(sort);
         sorted.putAll(Frequency);
 
         return sorted;

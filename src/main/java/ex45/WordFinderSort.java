@@ -12,12 +12,12 @@ import java.lang.*;
 
 public class WordFinderSort {
     public List<String> ChangeWord(List<String> lines) {
-        List<String> editedList = new ArrayList<String>();
+        List<String> editedList = new ArrayList<>();
 
         // Goes through all lines
-        for (int i = 0; i < lines.size(); i++) {
+        for (String line : lines) {
             // Goes through and replaces every instance of utilize with use
-            editedList.add(lines.get(i).replaceAll("utilize","use"));
+            editedList.add(line.replaceAll("utilize", "use"));
         }
         return editedList;
     }

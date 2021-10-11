@@ -1,12 +1,34 @@
 Base:
 Read file using Files.readAllLines
 Input contents of file into List
+Calls for Sort.Combiner (Edited code from previous example).
+After it spreads them into list call for Sort.Frequency
+Now Export
 
-Sort:
-Spread out imported list. Each word is a new array element. Use space as a delimiter to determine the end of a word.
-Take this list and iterate through taking each new work and adding it to a hashmap and a total word list. If the word already exists add +1 to the value
-Then sort the hashmap by value.
+
+Sort.Combiner:
+Goes through a for loop that iterates through until end of the list.
+Goes through another for loop that iterates through each character until end of length
+If this is the last word (end of length) check when last space was. Add substring from
+the next char after space to end (added to array).
+If it is not a space add each letter to a current string.
+When it reaches a space add string to array.
+
+Sort.Frequency
+Create Hashmap
+Iterate through the size of list.
+If Hashmap does not contain key already (first time word is being added)
+    - Add the key with a value of one
+If the key is contained already
+    - Add one to the value of the key
+Create a treemap and put contents into treemap
+    -This calls Compare
+
+Compare
+This does a sort going through all of the treemap.
 
 Export:
-Iterate through the sorted hashmap.
-Each value needs to be converted to a *.
+Iterate using a for loop through the Treemap (for all keys in that order)
+Take a stars method and use a for loop until value of key is reached adding stars to
+a string.
+Print the Key and stars next to it.

@@ -13,8 +13,8 @@ import java.util.Scanner;
 public class WordFinderExport {
     public static void exportList(List<String> Names) throws IOException {
         FileWriter outputWriter = new FileWriter("Output/" + Input() + ".txt");
-        for(int i=0; i<Names.size(); i++) {
-            outputWriter.write(Names.get(i) + "\n");
+        for (String name : Names) {
+            outputWriter.write(name + "\n");
         }
         outputWriter.close();
     }

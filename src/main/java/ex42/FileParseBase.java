@@ -16,17 +16,15 @@ public class FileParseBase {
         FileParseSort sort = new FileParseSort();
         FileParseTable table = new FileParseTable();
         // Turns input file into List
-        List<String> names = convertFile();
-        int total = names.size();
-        names = sort.Combiner(names);
-        table.TableOutput(names);
+        List<String> info = convertFile();
+        info = sort.Combiner(info);
+        table.TableOutput(info);
     }
 
 
 
     private static List<String> convertFile() throws IOException {
-        List<String> names = Files.readAllLines(Path.of("Input/exercise42_input.txt"));
-        return names;
+        return Files.readAllLines(Path.of("Input/exercise42_input.txt"));
     }
 
 

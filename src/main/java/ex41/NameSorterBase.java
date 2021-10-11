@@ -15,17 +15,14 @@ public class NameSorterBase {
     public static void main(String[] args) throws Exception {
         // Turns input file into List
         List<String> names = convertFile();
-        NameSorterSort sort = new NameSorterSort();
-        NameSorterExport export = new NameSorterExport();
-        names = sort.sortList(names);
-        export.exportList(names);
+        NameSorterSort.sortList(names);
+        NameSorterExport.exportList(names);
         }
 
 
 
     private static List<String> convertFile() throws IOException {
-        List<String> names = Files.readAllLines(Path.of("Input/exercise41_input.txt"));
-        return names;
+        return Files.readAllLines(Path.of("Input/exercise41_input.txt"));
     }
 
 

@@ -4,10 +4,7 @@
  */
 package ex42;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.lang.*;
-
 
 
 public class FileParseTable {
@@ -44,29 +41,20 @@ public class FileParseTable {
     }
 
     public String Spaces(int max, int size) {
-        String space = "";
         // Checks the max substracts size of string and adds 3 for design
-        for (int i=0; i<max-size + 3; i++){
-            space = space + ' ';
-        }
 
-        return space;
+        return " ".repeat(Math.max(0, max - size + 3));
     }
 
     public String Dash(int max) {
-        String dash = "";
         // Checks the max substracts size of string and adds 3 for design
-        for (int i=0; i<max; i++){
-            dash = dash + '-';
-        }
-
-        return dash;
+        return "-".repeat(Math.max(0, max));
     }
 
     public String SpaceMax(List<String> names) {
-        String SpaceMax =  Spaces(Max(names, 0), 0) + Spaces(Max(names, 1), 0)
+        String SpaceMaximum =  Spaces(Max(names, 0), 0) + Spaces(Max(names, 1), 0)
                 + Spaces(Max(names, 2), 0);
-        return Dash(SpaceMax.length());
+        return Dash(SpaceMaximum.length());
     }
 
 
