@@ -8,10 +8,10 @@ import java.util.Scanner;
 
 
 public class WebsiteGeneratorBase{
-    public static String SiteName;
-    public static String AuthorName;
-    public static String JavaFolder;
-    public static String CSSFolder;
+    private static String SiteName;
+    private static String AuthorName;
+    private static String JavaFolder;
+    private static String CSSFolder;
 
     public static void main(String[] args){
         UserInput();
