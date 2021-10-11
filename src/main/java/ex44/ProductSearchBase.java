@@ -7,6 +7,7 @@ package ex44;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import ex42.FileParseSort;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -19,34 +20,13 @@ import java.util.List;
 public class ProductSearchBase {
 
     public static void main(String[] args) throws Exception {
-        /*
-        String path = "Input/exercise44_input.json";
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
-
-        Gson gson = new Gson();
-        Object json = gson.fromJson(bufferedReader, Object.class);
-
-        System.out.println(json.toString());
+        ProductSearchParser parser = new ProductSearchParser();
+        JsonObject Found = parser.fileParse();
 
 
-         */
-        JsonParser parser = new JsonParser();
-        try {
-            Object obj = parser.parse(new FileReader("input/exercise44_input.json"));
-            JsonObject object = (JsonObject) obj;
-
-            //Reading products array from  the file
-            JsonArray subjects = (JsonArray)object.get("products");
-            Iterator iterate = subjects.iterator();
-            JsonObject json = (JsonObject) iterate.next();
-            JsonObject test = (JsonObject) iterate.next();
-            String Name = test.get("price").toString();
-            System.out.println(Name);
-            // while iterator.hasNext()
-        }
-        catch(Exception e) {
-            e.printStackTrace();
-        }
+        String Name = Found.get("price").toString();
+        System.out.println(Found);
+        System.out.println(Name);
     }
 
 
