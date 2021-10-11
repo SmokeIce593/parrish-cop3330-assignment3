@@ -15,13 +15,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class ProductSearchBase {
 
     public static void main(String[] args) throws Exception {
         ProductSearchParser parser = new ProductSearchParser();
+        // If this is null it errors out
+        // If it picks a names that is there then it works
         JsonObject Found = parser.fileParse();
+
+
 
 
         String Name = Found.get("price").toString();
@@ -31,9 +36,12 @@ public class ProductSearchBase {
 
 
 
-    private static List<String> convertFile() throws IOException {
-        List<String> names = Files.readAllLines(Path.of("Input/exercise42_input.txt"));
-        return names;
+
+
+    public String Input() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("What is the product name? ");
+        return input.nextLine();
     }
 
 
