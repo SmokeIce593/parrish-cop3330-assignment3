@@ -33,7 +33,6 @@ public class ProductSearchBase {
         JsonParser parser = new JsonParser();
         try {
             Object obj = parser.parse(new FileReader("input/exercise44_input.json"));
-
             JsonObject object = (JsonObject) obj;
 
             //Reading products array from  the file
