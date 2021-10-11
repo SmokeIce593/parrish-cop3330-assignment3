@@ -1,27 +1,24 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class Sort{
+    + {static} List<String> sortList()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Base{
+    +List<String> Names
+   + {static} void main()
+    - {static} List<String> convertFile()
 }
+
+class Export{
+    + {static} void exportList()
+    FileWriter outputWriter = new FileWriter()
+}
+
+Base <|-- Sort
+Base <|-- Export
 
 @enduml

@@ -1,10 +1,11 @@
 Base:
-Read file from list
+Read file using Files.readAllLines
 Input contents of file into List
 
 Sort:
-Take read in List and sort (Collections.sort is a possible choice)
+Take read in List and sort (Collections.sort is a possible choice) using CASE_INSENSITIVE_ORDER
 
 Export:
-Iterate through List
-Output each line of list into correct output txt
+Iterate through List (for loop)
+Output each line of list into correct output txt using FileWriter.
+Close File

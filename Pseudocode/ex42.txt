@@ -1,15 +1,23 @@
 Base:
-Read from list (input into ArrayList)
+Read file using Files.readAllLines
+Input contents of file into List
 
 Sort:
-Siphon through each line from list , is the delimiter
+Siphon through each line from list , is the delimiter (Double for loop i for names j for characters
+Characters check for ,
+Add each character to a string and when it reaches , add string not including comma (comma location - 1)
 Using the delimiter adding each parameter to list
+If it's the second comma (Where it would be the numbers) take the substring of the value after the space to the end
 
 Table:
-Get max string length for each section.
+Get max string length for each section. Compare each set of values (for loop i = i+3) and if current > max max = current
+When going through output add spaces to each one based on the max of the set value - size of the current word +
 Add a set number of spaces after each (3)
 
+For the spaces for the beginning of the table:
 Spaces between last and first is max length last + space last – 4
 Spaces between first and salary is max length first + space first -5
-Then Salary.
-Then get number of dashes max first +3 max last +3 max salary +3
+Then Salary (Don't really need spaces here at end)
+Convert the max number of spaces max first +3 max last +3 max salary +3
+Then get number of dashes using the max number of spaces. Use a for loop to create each dash for the length of the max
+spaces.

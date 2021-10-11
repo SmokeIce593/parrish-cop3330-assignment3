@@ -1,5 +1,5 @@
 Base:
-Read file from list
+Read file using Files.readAllLines
 Input contents of file into List
 
 Sort:

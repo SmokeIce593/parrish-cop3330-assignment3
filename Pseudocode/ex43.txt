@@ -1,9 +1,16 @@
 Base:
-Ask user input for site name, author, JavaScript Folder, and CSS Folder.
+Ask user input for site name, author, JavaScript Folder, and CSS Folder using scannerinput and some print statements
 Output the created text at the end of the program. Go through and create all folders and files from WebsiteGenerator
+Go to a create directory method
+Check for JS and CSS IF input == Y || input == y then print it's being created then use folder create.
+Then just add print statements to say each one was created (based on SiteName)
 
 WebsiteGenerator:
-Create main Directory
-Create HTML File and add the Site Name and Author Name to it
-Create JS Directory (If input == y || == Y)
-Create CSS Directory (If input == y || == Y)
+Create main Directory- Creates the base directory. \output + SiteName using folder create
+Create HTML File using folder create Output/ + SiteName + /index.html
+    -Add the Site Name and Author Name to it- Format a string in HTML like terms for title and meta
+    - Title is SiteName
+    - Meta is Author
+Then use bufferwrite to try and write the html in based on the string.
+Create JS Directory (If input == y || == Y)-  \output + SiteName + "\js" using folder create
+Create CSS Directory (If input == y || == Y)- \output + SiteName + "\css" using folder create

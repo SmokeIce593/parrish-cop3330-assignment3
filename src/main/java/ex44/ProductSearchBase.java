@@ -8,6 +8,7 @@ import java.util.List;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Files;
+import com.google.gson.Gson;
 
 
 public class ProductSearchBase {

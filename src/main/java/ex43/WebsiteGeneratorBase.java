@@ -14,8 +14,6 @@ public class WebsiteGeneratorBase{
     public static String CSSFolder;
 
     public static void main(String[] args){
-        WebsiteGenerator gen = new WebsiteGenerator();
-
         UserInput();
         Output();
     }
