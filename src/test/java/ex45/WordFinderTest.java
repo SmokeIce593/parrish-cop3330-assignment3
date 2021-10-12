@@ -4,18 +4,18 @@
  */
 
 package ex45;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.Assert;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class WordFinderTest {
     @Test
     void SeperateFromComma() {
         WordFinderSort sort = new WordFinderSort();
-        List<String> initialList = new ArrayList<String>();
+        List<String> initialList = new ArrayList<>();
 
         // Adding the List
         initialList.add("I would like to utilize the word utilize to use utilize");
@@ -24,12 +24,12 @@ class WordFinderTest {
 
         List<String> edited = sort.ChangeWord(initialList);
         // What the sorted list should look like
-        List<String> sortedCompare = new ArrayList<String>();
+        List<String> sortedCompare = new ArrayList<>();
         sortedCompare.add("I would like to use the word use to use use");
         sortedCompare.add("use");
         sortedCompare.add("use");
 
-        Assert.assertEquals(sortedCompare, edited);
+        Assertions.assertEquals(sortedCompare, edited);
 
     }
 }

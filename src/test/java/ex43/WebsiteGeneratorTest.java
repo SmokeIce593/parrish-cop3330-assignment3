@@ -4,12 +4,9 @@
  */
 
 package ex43;
-import org.junit.jupiter.api.Test;
-import org.junit.Assert;
-import java.util.ArrayList;
-import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 class WebsiteGeneratorTest {
     @Test
@@ -19,7 +16,7 @@ class WebsiteGeneratorTest {
         String expected = "Output/" + "Test";
 
 
-        Assert.assertEquals(actual, expected);
+        Assertions.assertEquals(actual, expected);
 
     }
 
@@ -31,7 +28,7 @@ class WebsiteGeneratorTest {
         boolean actual = gen.CreateHTML("Output/" + "Test" + "/index.html");
 
 
-        Assert.assertTrue(actual);
+        Assertions.assertTrue(actual);
 
     }
 
@@ -42,7 +39,7 @@ class WebsiteGeneratorTest {
         String actual = gen.CreateJS("Output/" + "Test" + "/js");
         String expected = "Output/" + "Test" + "/js";
 
-        Assert.assertEquals(actual, expected);
+        Assertions.assertEquals(actual, expected);
 
     }
 
@@ -53,7 +50,7 @@ class WebsiteGeneratorTest {
         String actual = gen.CreateJS("Output/" + "Test" + "/css");
         String expected = "Output/" + "Test" + "/css";
 
-        Assert.assertEquals(actual, expected);
+        Assertions.assertEquals(actual, expected);
 
     }
 }

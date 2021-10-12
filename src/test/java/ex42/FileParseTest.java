@@ -4,18 +4,18 @@
  */
 
 package ex42;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.Assert;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class FileParseTest {
     @Test
     void SeperateFromComma() {
         FileParseSort sort = new FileParseSort();
-        List<String> initialList = new ArrayList<String>();
+        List<String> initialList = new ArrayList<>();
 
         // Adding the List
         initialList.add("Test,Test1,Test2");
@@ -23,19 +23,19 @@ class FileParseTest {
 
         List<String> sorted = sort.Combiner(initialList);
         // What the sorted list should look like
-        List<String> sortedCompare = new ArrayList<String>();
+        List<String> sortedCompare = new ArrayList<>();
         sortedCompare.add("Test");
         sortedCompare.add("Test1");
         sortedCompare.add("Test2");
 
-        Assert.assertEquals(sortedCompare, sorted);
+        Assertions.assertEquals(sortedCompare, sorted);
 
     }
 
     @Test
     void Max0() {
         FileParseTable table = new FileParseTable();
-        List<String> initialList = new ArrayList<String>();
+        List<String> initialList = new ArrayList<>();
 
         // Adding the List
         initialList.add("1");
@@ -47,14 +47,14 @@ class FileParseTest {
         int maxvalue = table.Max(initialList, 0);
 
 
-        Assert.assertEquals(maxvalue, 4);
+        Assertions.assertEquals(maxvalue, 4);
 
     }
 
     @Test
     void Max1() {
         FileParseTable table = new FileParseTable();
-        List<String> initialList = new ArrayList<String>();
+        List<String> initialList = new ArrayList<>();
 
         // Adding the List
         initialList.add("1");
@@ -66,7 +66,7 @@ class FileParseTest {
         int maxvalue = table.Max(initialList, 1);
 
 
-        Assert.assertEquals(maxvalue, 5);
+        Assertions.assertEquals(maxvalue, 5);
 
     }
 
@@ -78,7 +78,7 @@ class FileParseTest {
         String Spaces = table.Spaces(5, 3);
         String Compare = "     ";
 
-        Assert.assertEquals(Spaces, Compare);
+        Assertions.assertEquals(Spaces, Compare);
 
     }
 
@@ -90,14 +90,14 @@ class FileParseTest {
         String Dashes = table.Dash(5);
         String Compare = "-----";
 
-        Assert.assertEquals(Dashes, Compare);
+        Assertions.assertEquals(Dashes, Compare);
 
     }
 
     @Test
     void DashMax() {
         FileParseTable table = new FileParseTable();
-        List<String> initialList = new ArrayList<String>();
+        List<String> initialList = new ArrayList<>();
 
         // Adding the List
         initialList.add("1");
@@ -110,7 +110,7 @@ class FileParseTest {
         String Spaces = table.SpaceMax(initialList);
         String Compare = "------------------------";
 
-        Assert.assertEquals(Spaces, Compare);
+        Assertions.assertEquals(Spaces, Compare);
 
     }
 }

@@ -4,18 +4,17 @@
  */
 
 package ex41;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.Assert;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class NameSorterTest {
     @Test
     void SortTrial(){
-        NameSorterSort sort = new NameSorterSort();
-        List<String> initialList = new ArrayList<String>();
+        List<String> initialList = new ArrayList<>();
 
         // Adding the unorganized List
         initialList.add("w");
@@ -24,16 +23,16 @@ class NameSorterTest {
         initialList.add("B");
 
         // Sorting the unorganized List
-        List<String> sorted = sort.sortList(initialList);
+        List<String> sorted = NameSorterSort.sortList(initialList);
 
         // What the sorted list should look like
-        List<String> sortedCompare = new ArrayList<String>();
+        List<String> sortedCompare = new ArrayList<>();
         sortedCompare.add("A");
         sortedCompare.add("B");
         sortedCompare.add("w");
         sortedCompare.add("Y");
 
-        Assert.assertEquals(sortedCompare, sorted);
+        Assertions.assertEquals(sortedCompare, sorted);
 
     }
 }

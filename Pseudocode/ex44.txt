@@ -1,0 +1,18 @@
+Base:
+Get input from scanner.
+Navigate to parser.
+After parsing some of the information we need to check and see if the object is now null.
+-	If it is not null, just return it.
+-	If it is null use a while loop and wait until a successful choose is picked.
+Then output the object information.
+
+Output:
+Get json “name” “price” and “quantity” and convert them into strings. Print them.
+For name json weirdly keeps quotes around name so grab substring of 1st index and string.length() -1.
+Parser:
+Using file reader and a json parser make the json file into an object.
+Convert the object into a Json object and turn this into an array buy getting products.
+Using Iterator attribute use, a while loop and iterate through until it does not have a next to go to.
+-	If found return the object with the same name as the input
+-	If not return null
+
