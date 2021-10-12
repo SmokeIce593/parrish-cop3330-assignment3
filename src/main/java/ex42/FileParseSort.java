@@ -11,31 +11,31 @@ import java.lang.*;
 
 
 public class FileParseSort {
-    public List<String> Combiner(List<String> names) {
+    public List<String> Combiner(List<String> info) {
         List<String> spreadList = new ArrayList<>();
 
         // Goes through all lines
-        for (int i=0; i<names.size(); i++){
-            String Current = names.get(i);
+        for (int i=0; i<info.size(); i++){
+            String Current = info.get(i);
             String CurrentBuild = "";
 
             // Goes through every character and checks for ,. Since the last name is before the first ,
             // And first name is before salary
-            spreadList.addAll(CharCombiner(names, Current, CurrentBuild, i));
+            spreadList.addAll(CharCombiner(info, Current, CurrentBuild, i));
 
         }
         return spreadList;
     }
 
-    public List<String> CharCombiner(List<String> names, String Current, String CurrentBuild, int i) {
+    public List<String> CharCombiner(List<String> info, String Current, String CurrentBuild, int i) {
             List<String> spreadList = new ArrayList<>();
             // Goes through every character and checks for ,. Since the last name is before the first ,
             // And first name is before salary
         StringBuilder CurrentBuildBuilder = new StringBuilder(CurrentBuild);
-        for(int j = 0; j<names.get(i).length(); j++){
+        for(int j = 0; j<info.get(i).length(); j++){
                 // If size of spreadlist is 2 (When it's about to be the numbers) then break
                 if (spreadList.size() == 2){
-                    spreadList.add(names.get(i).substring(j));
+                    spreadList.add(info.get(i).substring(j));
                     break;
                 }
 

@@ -4,7 +4,7 @@
 
 
 class WordFinderSort{
-    + List<String> ChangeWord()
+    + List<String> ChangeWord(List<String> lines)
     List<String> editedList
 }
 
@@ -15,7 +15,7 @@ class WordFinderBase{
 }
 
 class WordFinderExport{
-   + {static} void exportList()
+   + {static} void exportList(List<String> Names)
    + {static} String Input()
 }
 WordFinderBase <|-- WordFinderSort

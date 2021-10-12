@@ -4,7 +4,7 @@
 
 
 class NameSorterSort{
-    + {static} List<String> sortList()
+    + {static} List<String> sortList(List<String> names)
 }
 
 class NameSorterBase{
@@ -14,7 +14,7 @@ class NameSorterBase{
 }
 
 class NameSorterExport{
-    + {static} void exportList()
+    + {static} void exportList(List<String> Names)
 }
 
 NameSorterBase <|-- NameSorterSort

@@ -8,33 +8,33 @@ import java.util.List;
 
 
 public class FileParseTable {
-    public void TableOutput(List<String> names) {
-        String DashString = Dash(SpaceMax(names).length());
+    public void TableOutput(List<String> info) {
+        String DashString = Dash(SpaceMax(info).length());
 
         System.out.printf("Last%s" +
                 "First%s" +
                 "Salary%s" +
                         "\n%s",
-                Spaces(Max(names, 0), 4),
-                Spaces(Max(names, 1), 5),
-                Spaces(Max(names, 2), 6),
+                Spaces(Max(info, 0), 4),
+                Spaces(Max(info, 1), 5),
+                Spaces(Max(info, 2), 6),
                 DashString);
 
-        for (int i=0; i<names.size(); i++){
+        for (int i=0; i<info.size(); i++){
             if (i % 3 == 0)
                 System.out.print("\n");
-            String space = Spaces(Max(names, i % 3), names.get(i).length());
-            System.out.printf("%s%s", names.get(i), space);
+            String space = Spaces(Max(info, i % 3), info.get(i).length());
+            System.out.printf("%s%s", info.get(i), space);
         }
 
     }
 
-    public int Max(List<String> names, int start) {
+    public int Max(List<String> info, int start) {
         int max = 0;
         // Goes through the same type (hence the +3) and checks for max length
-        for (int i= start; i<names.size(); i+=3){
-            if(names.get(i).length() > max)
-                max = names.get(i).length();
+        for (int i= start; i<info.size(); i+=3){
+            if(info.get(i).length() > max)
+                max = info.get(i).length();
         }
 
         return max;
@@ -51,9 +51,9 @@ public class FileParseTable {
         return "-".repeat(Math.max(0, max));
     }
 
-    public String SpaceMax(List<String> names) {
-        String SpaceMaximum =  Spaces(Max(names, 0), 0) + Spaces(Max(names, 1), 0)
-                + Spaces(Max(names, 2), 0);
+    public String SpaceMax(List<String> info) {
+        String SpaceMaximum =  Spaces(Max(info, 0), 0) + Spaces(Max(info, 1), 0)
+                + Spaces(Max(info, 2), 0);
         return Dash(SpaceMaximum.length());
     }
 

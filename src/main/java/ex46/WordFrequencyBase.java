@@ -17,9 +17,9 @@ public class WordFrequencyBase {
         TreeMap Frequency;
         WordFrequencySort sort = new WordFrequencySort();
         // Turns input file into List
-        List<String> names = convertFile();
-        names = sort.Combiner(names);
-        Frequency = sort.WordFrequency(names);
+        List<String> textList = convertFile();
+        textList = sort.Combiner(textList);
+        Frequency = sort.WordFrequency(textList);
         WordFrequencyExport.printList(Frequency);
     }
 

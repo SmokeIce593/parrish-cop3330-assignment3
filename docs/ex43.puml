@@ -18,10 +18,10 @@ class WebsiteGenerator{
         + String Site
         + String Author
           String HTML
-        + String CreateDirectory()
-        + boolean CreateHTML()
-        + String CreateCSS()
-        + String CreateJS()
+        + String CreateDirectory(String Directory)
+        + boolean CreateHTML(String Info)
+        + String CreateCSS(String Directory)
+        + String CreateJS(String Directory)
 
 }
 WebsiteGeneratorBase <|-- WebsiteGenerator

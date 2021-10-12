@@ -25,16 +25,16 @@ public class WordFrequencySort {
         return spreadList;
     }
 
-    public List<String> CharCombiner(List<String> names, String Current, String CurrentBuild, int i) {
+    public List<String> CharCombiner(List<String> textList, String Current, String CurrentBuild, int i) {
         List<String> spreadList = new ArrayList<>();
         // Goes through every character and checks for spaces. Since the last name is before the first ,
         // And first name is before salary
         int lastspace = -1;
         StringBuilder CurrentBuildBuilder = new StringBuilder(CurrentBuild);
-        for(int j = 0; j<names.get(i).length(); j++){
+        for(int j = 0; j<textList.get(i).length(); j++){
             // If last character in word then break
-            if (j == names.get(i).length()-1){
-                spreadList.add(names.get(i).substring(lastspace + 1));
+            if (j == textList.get(i).length()-1){
+                spreadList.add(textList.get(i).substring(lastspace + 1));
                 break;
             }
 

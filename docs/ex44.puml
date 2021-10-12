@@ -4,8 +4,8 @@
 
 
 class ProductSearchParser{
-    + {static} JsonObject fileParse()
-    + {static} JsonObject IterateArray()
+    + {static} JsonObject fileParse(String Input)
+    + {static} JsonObject IterateArray(JsonArray subjects, String Input)
     Object obj
     JsonObject objects
     JsonArray subjects
@@ -16,14 +16,14 @@ class ProductSearchParser{
 class ProductSearchBase{
     + {static} void main()
     + {static} String Input()
-    + {static} JsonObject Conditional()
+    + {static} JsonObject Conditional(JsonObject Found)
     String UserInput
     JsonObject Found
 
 }
 
 class ProductSearchOutput{
-    void output()
+    void output(JsonObject Found)
 }
 ProductSearchBase <|-- ProductSearchParser
 ProductSearchBase <|-- ProductSearchOutput

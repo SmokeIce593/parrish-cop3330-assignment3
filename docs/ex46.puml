@@ -4,9 +4,9 @@
 
 
 class WordFrequencySort{
-    +List<String> Combiner()
-    +List<String> CharCombiner()
-    +TreeMap<String, Integer> WordFrequency()
+    +List<String> Combiner(List<String> textList)
+    +List<String> CharCombiner(List<String> textList, String Current, String CurrentBuild, int i)
+    +TreeMap<String, Integer> WordFrequency(List<String> textList)
     List<String> spreadList
     String Current
     String CurrentBuild
@@ -28,12 +28,12 @@ class WordFrequencyExport{
     String keyString
     int valueMap
     String Staradd
-    + {static} String Stars()
-    + {static} void printList()
+    + {static} String Stars(int staramount)
+    + {static} void printList(TreeMap<String, Integer> list)
 }
 
 class WordFrequencyCompare{
-    int compare()
+    int compare(String a, String b)
     +Map<String, Integer> base
 }
 

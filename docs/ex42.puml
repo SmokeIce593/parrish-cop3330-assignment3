@@ -4,8 +4,8 @@
 
 
 class FileParseSort{
-    + List<String> Combiner()
-    + List<String> CharCombiner()
+    + List<String> Combiner(List<String> info)
+    + List<String> CharCombiner(List<String> info, String Current, String CurrentBuild, int i)
       String DashString
       List<String> spreadList
       String Current
@@ -21,11 +21,11 @@ class FileParseBase{
 }
 
 class FileParseTable{
-    + {static} void TableOutput()
-    + int Max()
-    + String Spaces()
-    + String Dash()
-    + String SpaceMax()
+    + {static} void TableOutput(List<String> info)
+    + int Max(List<String> info, int start)
+    + String Spaces(int max, int size)
+    + String Dash(int max)
+    + String SpaceMax(List<String> info)
       String DashString
       String Space
       int Max
