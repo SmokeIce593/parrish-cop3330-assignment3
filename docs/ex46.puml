@@ -1,2 +1,43 @@
 @startuml
+'https://plantuml.com/class-diagram
+
+
+
+class WordFrequencySort{
+    +List<String> Combiner()
+    +List<String> CharCombiner()
+    +TreeMap<String, Integer> WordFrequency()
+    List<String> spreadList
+    String Current
+    String CurrentBuild
+    int lastspace
+    int i
+    int j
+    Map<String, Integer> Frequency
+    TreeMap<String, Integer> sorted
+}
+
+class WordFrequencyBase{
+    TreeMap Frequency
+    List<String> names
+    - {static} List<String> convertFile()
+    + {static} void main()
+}
+
+class WordFrequencyExport{
+    String keyString
+    int valueMap
+    String Staradd
+    + {static} String Stars()
+    + {static} void printList()
+}
+
+class WordFrequencyCompare{
+    int compare()
+    +Map<String, Integer> base
+}
+
+WordFrequencyBase <|-- WordFrequencySort
+WordFrequencyBase <|-- WordFrequencyExport
+WordFrequencySort <|-- WordFrequencyCompare
 @enduml

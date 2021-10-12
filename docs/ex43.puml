@@ -5,19 +5,19 @@
 
 
 class WebsiteGeneratorBase{
-        -{static} String SiteName;
-        -{static} String AuthorName;
-        -{static} String JavaFolder;
-        -{static} String CSSFolder;
+        -{static} String SiteName
+        -{static} String AuthorName
+        -{static} String JavaFolder
+        -{static} String CSSFolder
         +{static} void Output()
         +{static} void UserInput()
 }
 
 class WebsiteGenerator{
-        + String FileLocation;
-        + String Site;
-        + String Author;
-        + String HTML;
+        + String FileLocation
+        + String Site
+        + String Author
+          String HTML
         + String CreateDirectory()
         + boolean CreateHTML()
         + String CreateCSS()

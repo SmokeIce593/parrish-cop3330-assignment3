@@ -4,11 +4,7 @@
  */
 package ex46;
 
-import java.io.IOException;
-import java.io.FileWriter;
-import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.TreeMap;
 
 
@@ -23,11 +19,7 @@ public class WordFrequencyExport {
     }
 
     public static String Stars(int staramount){
-        String StarString = "";
-       for(int i=0; i<staramount; i++){
-           StarString = StarString + "*";
-       }
-       return StarString;
+        return "*".repeat(Math.max(0, staramount));
     }
 
 }

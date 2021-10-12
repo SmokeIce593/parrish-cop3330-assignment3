@@ -15,9 +15,9 @@ public class WordFinderBase {
     public static void main(String[] args) throws Exception {
         WordFinderSort sort = new WordFinderSort();
         // Turns input file into List
-        List<String> names = convertFile();
-        names = sort.ChangeWord(names);
-        WordFinderExport.exportList(names);
+        List<String> words = convertFile();
+        words = sort.ChangeWord(words);
+        WordFinderExport.exportList(words);
     }
 
 

@@ -6,14 +6,16 @@
 class FileParseSort{
     + List<String> Combiner()
     + List<String> CharCombiner()
-    + String DashString
-    + List<String> spreadList
-    + String Current
-    + String CurrentBuild
+      String DashString
+      List<String> spreadList
+      String Current
+      String CurrentBuild
+      int i
+      int j
 }
 
 class FileParseBase{
-   + List<String> Info
+     List<String> Info
    + {static} void main()
    - {static} List<String> convertFile()
 }
@@ -24,10 +26,10 @@ class FileParseTable{
     + String Spaces()
     + String Dash()
     + String SpaceMax()
-    + String DashString
-    + String Space
-    + Int Max
-    + String SpaceMaximum
+      String DashString
+      String Space
+      int Max
+      String SpaceMaximum
 }
 FileParseBase <|-- FileParseSort
 FileParseBase <|-- FileParseTable

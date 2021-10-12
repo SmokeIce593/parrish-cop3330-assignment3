@@ -4,33 +4,29 @@
  */
 package ex46;
 
-import java.util.HashMap;
-import java.util.List;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.nio.file.Files;
-import java.util.Map;
+import java.nio.file.Path;
+import java.util.List;
 import java.util.TreeMap;
 
 
 public class WordFrequencyBase {
 
     public static void main(String[] args) throws Exception {
-        TreeMap Frequency = new TreeMap();
-        WordFrequencyExport export = new WordFrequencyExport();
+        TreeMap Frequency;
         WordFrequencySort sort = new WordFrequencySort();
         // Turns input file into List
         List<String> names = convertFile();
         names = sort.Combiner(names);
         Frequency = sort.WordFrequency(names);
-        export.printList(Frequency);
+        WordFrequencyExport.printList(Frequency);
     }
 
 
 
     private static List<String> convertFile() throws IOException {
-        List<String> names = Files.readAllLines(Path.of("Input/exercise46_input.txt"));
-        return names;
+        return Files.readAllLines(Path.of("Input/exercise46_input.txt"));
     }
 
 

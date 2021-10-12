@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 Cameron Parrish
+ */
 package ex44;
 
 import com.google.gson.JsonObject;

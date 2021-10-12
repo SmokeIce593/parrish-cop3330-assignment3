@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 Cameron Parrish
+ */
 package ex44;
 
 import com.google.gson.JsonArray;
@@ -14,10 +18,10 @@ public class ProductSearchParser {
         try {
             //Gets overarching obj
             Object obj = parser.parse(new FileReader("input/exercise44_input.json"));
-            JsonObject object = (JsonObject) obj;
+            JsonObject objects = (JsonObject) obj;
 
             //Reading products array
-            JsonArray subjects = (JsonArray)object.get("products");
+            JsonArray subjects = (JsonArray)objects.get("products");
 
             return IterateArray(subjects, Input);
             }

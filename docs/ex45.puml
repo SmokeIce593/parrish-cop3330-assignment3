@@ -1,2 +1,24 @@
 @startuml
+'https://plantuml.com/class-diagram
+
+
+
+class WordFinderSort{
+    + List<String> ChangeWord()
+    List<String> editedList
+}
+
+class WordFinderBase{
+      List<String> words
+   + {static} void main()
+   - {static} List<String> convertFile()
+}
+
+class WordFinderExport{
+   + {static} void exportList()
+   + {static} String Input()
+}
+WordFinderBase <|-- WordFinderSort
+WordFinderBase <|-- WordFinderExport
+
 @enduml

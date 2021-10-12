@@ -10,9 +10,9 @@ import java.io.File;
 import java.io.FileWriter;
 
 public class WebsiteGenerator {
-    String FileLocation;
-    String Site;
-    String Author;
+    public String FileLocation;
+    public String Site;
+    public String Author;
 
     // Create Main Directory
     public String CreateDirectory(String Directory) {

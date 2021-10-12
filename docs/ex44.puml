@@ -1,2 +1,31 @@
 @startuml
+'https://plantuml.com/class-diagram
+
+
+
+class ProductSearchParser{
+    + {static} JsonObject fileParse()
+    + {static} JsonObject IterateArray()
+    Object obj
+    JsonObject objects
+    JsonArray subjects
+    String input
+    JsonObject individual
+}
+
+class ProductSearchBase{
+    + {static} void main()
+    + {static} String Input()
+    + {static} JsonObject Conditional()
+    String UserInput
+    JsonObject Found
+
+}
+
+class ProductSearchOutput{
+    void output()
+}
+ProductSearchBase <|-- ProductSearchParser
+ProductSearchBase <|-- ProductSearchOutput
+
 @enduml

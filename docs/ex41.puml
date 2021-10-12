@@ -8,7 +8,7 @@ class NameSorterSort{
 }
 
 class NameSorterBase{
-    +List<String> Names
+     List<String> Names
    + {static} void main()
     - {static} List<String> convertFile()
 }
